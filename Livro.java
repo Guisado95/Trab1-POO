@@ -5,7 +5,7 @@ class Livro {
 
 
     //construtor
-    public Livro (String titulo, String autor, boolean) {
+    public Livro (String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
         this.disponivel = true;
@@ -15,7 +15,7 @@ class Livro {
         return titulo;
     }
 
-    public String setTitulo (String titulo) {
+    public void setTitulo (String titulo) {
         this.titulo = titulo;
     }
 
@@ -23,15 +23,15 @@ class Livro {
         return autor;
     }
 
-    public String setAutor(String autor) {
+    public void setAutor(String autor) {
         this.autor = autor;
     }
 
     public boolean getDisponivel (){
-        return = disponivel;
+        return disponivel;
     }
 
-    public boolean setDisponivel (boolean disponivel) {
+    public void setDisponivel (boolean disponivel) {
             this.disponivel = disponivel;
     }
 }
