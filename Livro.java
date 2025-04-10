@@ -32,12 +32,6 @@ class Livro {
     }
 
     public boolean setDisponivel (boolean disponivel) {
-        if (disponivel = true) {
             this.disponivel = disponivel;
-        } else {
-            System.out.println ("O livro está indisponível.")
-        }
     }
-
-
 }
