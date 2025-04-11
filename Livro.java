@@ -2,13 +2,15 @@ class Livro {
     private String titulo;
     private String autor;
     private boolean disponivel;
-
-
     //construtor
     public Livro (String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
         this.disponivel = true;
+    }
+
+    public String toString(){
+        return titulo + " | " + autor + (disponivel ? " | Disponível" : " | Indisponível");
     }
 
     public String getTitulo() {
