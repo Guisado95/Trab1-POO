@@ -3,7 +3,7 @@ import java.util.List;
 
 class Biblioteca {
     List<Livro> livros;
-
+    // construtor
     public Biblioteca() {
         this.livros = new ArrayList<>();
     }
@@ -14,12 +14,12 @@ class Biblioteca {
 
     public void EmprestarLivro(String titulo) {
         for (Livro livro : livros) {
-            if (titulo == livro.getTitulo()) {
+            if (livro.getTitulo().equals(titulo)) {
                 if (livro.getDisponivel()) {
-                    System.out.println("Livro disponível.");
+                    System.out.println("Você alugou " + livro);
                     livro.setDisponivel(false);
                 } else {
-                    System.out.println("Livro indisponível.");
+                    System.out.println("Livro em questão está indisponível.");
                 }
             }
         }
@@ -27,10 +27,12 @@ class Biblioteca {
 
     public void DevolverLivro(String titulo) {
         for (Livro livro : livros) {
-            if (titulo == livro.getTitulo()) {
-                if (livro.getDisponivel()) {
+            if (livro.getTitulo().equals(titulo)) {
+                if (livro.getDisponivel() == false) {
                     livro.setDisponivel(true);
-                    System.out.println("Livro devolvido.");
+                    System.out.println("Você devolveu " + livro);
+                } else { 
+
                 }
             }
         }
@@ -38,8 +40,7 @@ class Biblioteca {
 
     public void ListarLivros(){
         for (Livro livro : livros) {
-            System.out.println("Lista: " + livro);
+            System.out.println("Lista de livros - " + livro);
         }
     }
-
 }
